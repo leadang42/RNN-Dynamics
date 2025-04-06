@@ -173,5 +173,8 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+archive/
+results/
+
 archive_/
 results_/
