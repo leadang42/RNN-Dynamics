@@ -114,7 +114,8 @@ def compute_decoding_error(responses, output_weights, num_trials=10):
                 if decoded_angle < 0:
                     decoded_angle += 2*np.pi
                 
-                error = np.arccos(np.cos(decoded_angle - theta)) # error = np.minimum(np.abs(decoded_angle - theta), 2*np.pi - np.abs(decoded_angle - theta))
+                # error = np.minimum(np.abs(decoded_angle - theta), 2*np.pi - np.abs(decoded_angle - theta))
+                error = np.arccos(np.cos(decoded_angle - theta)) 
                 model_errors[trial, t] = error
         
         errors.append(np.mean(model_errors, axis=0))
